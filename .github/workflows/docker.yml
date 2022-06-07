@@ -6,8 +6,19 @@ on:
     tags:
       - "v*"
     branches:
+      - "dockerbuild"
       - "develop"
       - "release/v*"
+  workflow_dispatch:
+    inputs:
+      geth_version:
+        description: 'The Geth version to build from, either fh1 or fh2'
+        required: true
+        default: 'fh2'
+        type: choice
+        options:
+        - fh1
+        - fh2
 
 env:
   REGISTRY: ghcr.io
@@ -68,7 +79,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=tag
-            type=sha,prefix=,enable=${{ github.ref == 'refs/heads/develop' || startsWith(github.ref, 'refs/heads/release/v') }}
+            type=sha,prefix=,enable=${{ github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/dockerbuild' || startsWith(github.ref, 'refs/heads/release/v') }}
             type=raw,enable=${{ github.ref == 'refs/heads/develop' }},value=develop
             type=raw,enable=${{ startsWith(github.ref, 'refs/heads/release/v') }},value=${{ steps.extract_branch.outputs.release_train }}
           flavor: |
@@ -85,7 +96,7 @@ jobs:
   bundle-docker-versions:
     needs: build-vanilla
     runs-on: ubuntu-20.04
-    if: ${{ startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, 'build:all') }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, 'build:all') || github.event_name == 'workflow_dispatch' }}
 
     permissions:
       contents: read
@@ -115,9 +126,11 @@ jobs:
           echo "##[set-output name=release_train;]$(echo ${GITHUB_REF#refs/heads/release/})"
 
       - run: |
-          docker pull ghcr.io/streamingfast/go-ethereum:${{ matrix.binary }}-latest-fh1
-          echo VERSION=$(docker inspect --format='{{index .Config.Labels "org.opencontainers.image.version"}}' 'ghcr.io/streamingfast/go-ethereum':${{ matrix.binary }}-latest-fh1) >> $GITHUB_ENV
+          docker pull ghcr.io/streamingfast/go-ethereum:${{ matrix.binary }}-latest-${GETH_VERSION:-fh2}
+          echo VERSION=$(docker inspect --format='{{index .Config.Labels "org.opencontainers.image.version"}}' 'ghcr.io/streamingfast/go-ethereum':${{ matrix.binary }}-latest-${GETH_VERSION:-fh2}) >> $GITHUB_ENV
           echo SF_VERSION=$(echo "${{ needs.build-vanilla.outputs.tags }}" | grep -Ev "(develop|0.10.x)" | head -n 1 |cut -d: -f2) >> $GITHUB_ENV
+        env:
+          GETH_VERSION: ${{ github.event.inputs.geth_version }}
 
       - name: Generate docker tags/labels from github build context
         id: meta
@@ -155,7 +168,7 @@ jobs:
           echo "::set-output name=${{ matrix.binary }}::$OUT"
 
   slack-notifications-vanilla:
-    if: ${{ !startsWith(github.ref, 'refs/tags/') && !contains(github.event.head_commit.message, 'build:all') }}
+    if: ${{ !startsWith(github.ref, 'refs/tags/') && !contains(github.event.head_commit.message, 'build:all') && github.event_name != 'workflow_dispatch' }}
     needs: [build-vanilla]
     runs-on: ubuntu-20.04
     steps:
