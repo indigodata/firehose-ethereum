@@ -6,10 +6,7 @@ on:
     tags:
       - "v*"
     branches:
-      - "dockerbuild"
-      - "develop"
-      - "release/v*"
-      - "feature/*"
+      - "stepd"
   workflow_dispatch:
     inputs:
       geth_version:

@@ -17,13 +17,13 @@ require (
 	github.com/streamingfast/cli v0.0.4-0.20220630165922-bc58c6666fc8
 	github.com/streamingfast/dauth v0.0.0-20220404140613-a40f4cd81626
 	github.com/streamingfast/derr v0.0.0-20220526184630-695c21740145
-	github.com/streamingfast/dgrpc v0.0.0-20221028160017-78eabcebcf78
+	github.com/streamingfast/dgrpc v0.0.0-20221031150102-fc3638a49975
 	github.com/streamingfast/dlauncher v0.0.0-20220909121534-7a9aa91dbb32
 	github.com/streamingfast/dmetering v0.0.0-20220307162406-37261b4b3de9
 	github.com/streamingfast/dmetrics v0.0.0-20220811180000-3e513057d17c
 	github.com/streamingfast/dstore v0.1.1-0.20221025062403-36259703e97b
 	github.com/streamingfast/eth-go v0.0.0-20221004173352-5738e9aa2af6
-	github.com/streamingfast/firehose v0.1.1-0.20221017171248-8fd3adbe7b4d
+	github.com/streamingfast/firehose v0.1.1-0.20221024150216-1d375a2baa87
 	github.com/streamingfast/firehose-ethereum/types v0.0.0-20221019183101-bdeb8dafed8d
 	github.com/streamingfast/index-builder v0.0.0-20220812125759-4ea1e5a3aa91
 	github.com/streamingfast/jsonpb v0.0.0-20210811021341-3670f0aa02d0
@@ -35,7 +35,7 @@ require (
 	github.com/streamingfast/sf-tools v0.0.0-20221020185155-d5fe94d7578e
 	github.com/streamingfast/shutter v1.5.0
 	github.com/streamingfast/snapshotter v0.0.0-20220413132715-3f71bf33f0ea
-	github.com/streamingfast/substreams v0.0.21-0.20221028150342-6a1df703b67d
+	github.com/streamingfast/substreams v0.0.21-0.20221031140432-86405ff3d950
 	github.com/stretchr/testify v1.8.0
 	github.com/test-go/testify v1.1.4
 	github.com/tidwall/gjson v1.14.1
@@ -58,6 +58,7 @@ require (
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp v0.32.3 // indirect
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace v1.8.6 // indirect
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping v0.32.6 // indirect
+	github.com/GoogleCloudPlatform/opentelemetry-operations-go/propagator v0.0.0-20221018185641-36f91511cfd7 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/ShinyTrinkets/meta-logger v0.2.0 // indirect

@@ -109,6 +109,8 @@ github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace v1.8.6
 github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace v1.8.6/go.mod h1:NE8dAwJ1VU4WFdJYTlO0tdobQFdy70z8wNDU1L3VAr4=
 github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping v0.32.6 h1:QHbRbU/HI7SuNVqP0rDHK5jAMcwzuAex2akl3p+7YTo=
 github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping v0.32.6/go.mod h1:/G0zPXsUx5gZUd6ryJakuDo4VR7EJScegf1ZNK8xIGs=
+github.com/GoogleCloudPlatform/opentelemetry-operations-go/propagator v0.0.0-20221018185641-36f91511cfd7 h1:4cXY9jZO7UoRYKyD+CssnBlwn2HTeUzCQ1b44PJijzc=
+github.com/GoogleCloudPlatform/opentelemetry-operations-go/propagator v0.0.0-20221018185641-36f91511cfd7/go.mod h1:FwtSi1M0P8cuMlHxVso1vcivukprUr1bBwf15CRypOI=
 github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb06e3pkSAbeQ52E9H9iFoQsEEwGN64994WTCIhntQ=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
 github.com/PuerkitoBio/purell v1.1.1 h1:WEQqlqaGbrPkxLJWfBwQmfEAE1Z7ONdDLqrN38tNFfI=
@@ -705,8 +707,10 @@ github.com/streamingfast/derr v0.0.0-20210811180100-9138d738bcec/go.mod h1:ulVfu
 github.com/streamingfast/derr v0.0.0-20220526184630-695c21740145 h1:rSML09L92fulVlLUFPAiijai+hBbJTfC5NaqK4n+OEY=
 github.com/streamingfast/derr v0.0.0-20220526184630-695c21740145/go.mod h1:YUDWnOSPZvpD2bX6eThzcgHLyPObEjIOQ8007bG13no=
 github.com/streamingfast/dgrpc v0.0.0-20220909121013-162e9305bbfc/go.mod h1:YlFJuFiB9rmglB5UfTfnsOTfKC1rFo+D0sRbTzLcqgc=
-github.com/streamingfast/dgrpc v0.0.0-20221028160017-78eabcebcf78 h1:pWVfediiBNmd9c++/PCm6WVS/KXDYwfYGZtlSOlMpCg=
-github.com/streamingfast/dgrpc v0.0.0-20221028160017-78eabcebcf78/go.mod h1:lyMNlgiGEB8I06l9zyChIqfMd60gfhBK67vF3hvv/2I=
+github.com/streamingfast/dgrpc v0.0.0-20221031143608-3f023b3d2900 h1:o1C5OQ5zQE2kb9Uwp5Doi/947tKUXKr9QK1Iu715WAU=
+github.com/streamingfast/dgrpc v0.0.0-20221031143608-3f023b3d2900/go.mod h1:MxMELLSkMD7m+OYGh+nB4H+yQfLK3N1OV45nJ43vPmY=
+github.com/streamingfast/dgrpc v0.0.0-20221031150102-fc3638a49975 h1:HxNMY146SOMvMYRYbAE3fFnv5crWrn50mcRYZxO9whM=
+github.com/streamingfast/dgrpc v0.0.0-20221031150102-fc3638a49975/go.mod h1:aIgTp2DbNoSe4kQIUe1nY/h6MK2cCTiOMnJw/ECGAFg=
 github.com/streamingfast/dlauncher v0.0.0-20220909121534-7a9aa91dbb32 h1:8HkoK2ZROiOd/Yy1abSwrhYxZCp5RJV+7RSv8ZKRgJo=
 github.com/streamingfast/dlauncher v0.0.0-20220909121534-7a9aa91dbb32/go.mod h1:3yohsSqjVQpUGwIYpFIQ8izS8ms9vYhz2dpDspyxP0A=
 github.com/streamingfast/dmetering v0.0.0-20220301165106-a642bb6a21bd/go.mod h1:Eu1SH2HyBbDUmQqJV+f5oowCQ/c02HkAZyR5U2BKIT8=
@@ -723,8 +727,11 @@ github.com/streamingfast/dtracing v0.0.0-20220301163030-15ce3f71dd1c h1:wy7a9uNZ
 github.com/streamingfast/dtracing v0.0.0-20220301163030-15ce3f71dd1c/go.mod h1:Nu6Sb4T/fuETQ2eRcve4x8fygSD3oE5NY5foJ09xeBc=
 github.com/streamingfast/eth-go v0.0.0-20221004173352-5738e9aa2af6 h1:vo2OB2a/SwhDondFrHiM8OYUKMCH8WvqQBS/Pm1TkbE=
 github.com/streamingfast/eth-go v0.0.0-20221004173352-5738e9aa2af6/go.mod h1:Qwr1CF6VXB2h5kFtK62qtPQyp/kqMexz5vQBlj/lJCQ=
-github.com/streamingfast/firehose v0.1.1-0.20221017171248-8fd3adbe7b4d h1:jSPu9IE+bdddw+svgvRvqSGikKpnoXs8fhi0qizsDaU=
 github.com/streamingfast/firehose v0.1.1-0.20221017171248-8fd3adbe7b4d/go.mod h1:weGz9xDNJMBNmn03XiJZ/b5Ngw8UAUoLirarqG7OwQY=
+github.com/streamingfast/firehose v0.1.1-0.20221024150216-1d375a2baa87 h1:iR5kbbiAFmSd1G2OdNZ45/vdiVU0aNnPdskCzR2VfyY=
+github.com/streamingfast/firehose v0.1.1-0.20221024150216-1d375a2baa87/go.mod h1:pZR7IqSO8agDO9pMO//AGaloBzUTfkwlS9c72MA85Sg=
+github.com/streamingfast/firehose v0.1.1-0.20221028202817-b974eb7b2c62 h1:qLOuJJIVDGHl06UCmNcA+1goTzNNNSkLmk7oJu/CAII=
+github.com/streamingfast/firehose v0.1.1-0.20221028202817-b974eb7b2c62/go.mod h1:pZR7IqSO8agDO9pMO//AGaloBzUTfkwlS9c72MA85Sg=
 github.com/streamingfast/firehose-ethereum/types v0.0.0-20221019183101-bdeb8dafed8d h1:HNRLaZen5tx9IVmkiBN6ZPilrsrXq/f0l2GFvdkyAjo=
 github.com/streamingfast/firehose-ethereum/types v0.0.0-20221019183101-bdeb8dafed8d/go.mod h1:Kh5fptEEMKVw/QXrdfr49ldY3SP5+/MJoUPQfUtByUU=
 github.com/streamingfast/index-builder v0.0.0-20220812125759-4ea1e5a3aa91 h1:HA82sFHVw/4fVKpcCotH6darAVuhq6vj7y3k6JJO5sI=
@@ -760,8 +767,10 @@ github.com/streamingfast/shutter v1.5.0 h1:NpzDYzj0HVpSiDJVO/FFSL6QIK/YKOxY0gJAt
 github.com/streamingfast/shutter v1.5.0/go.mod h1:B/T6efqdeMGbGwjzPS1ToXzYZI4kDzI5/u4I+7qbjY8=
 github.com/streamingfast/snapshotter v0.0.0-20220413132715-3f71bf33f0ea h1:urZ/9/yTatDNjiny9LizyRm7zi350mhpymTWkjKq5g4=
 github.com/streamingfast/snapshotter v0.0.0-20220413132715-3f71bf33f0ea/go.mod h1:DdwE8twv+VjF/6AGqL5JSfS3/Pc59pPxaKJmIu9Y/T4=
-github.com/streamingfast/substreams v0.0.21-0.20221028150342-6a1df703b67d h1:cFdZ42/G8YYd/mKBfdOA69+/8VZGsLERfe64JlsqV0k=
-github.com/streamingfast/substreams v0.0.21-0.20221028150342-6a1df703b67d/go.mod h1:C9UaLbR07tj3nKcB7M9QCN0IoyF3Ps1+pxHcVY/ZDzs=
+github.com/streamingfast/substreams v0.0.21-0.20221031135129-93210a5b8667 h1:Utf60wu6qRnFiurUbHyLc/sYuPPxtPqT1wZVk3Ewjlc=
+github.com/streamingfast/substreams v0.0.21-0.20221031135129-93210a5b8667/go.mod h1:DTnN2w90TpVSl8xcgiY28R1im+RedszPdZyjUzcHw64=
+github.com/streamingfast/substreams v0.0.21-0.20221031140432-86405ff3d950 h1:p2+I/el0Pg1Xu9OMv78ydpbevzWkRCv8zERTb1/CgHc=
+github.com/streamingfast/substreams v0.0.21-0.20221031140432-86405ff3d950/go.mod h1:DTnN2w90TpVSl8xcgiY28R1im+RedszPdZyjUzcHw64=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.2.0/go.mod h1:qt09Ya8vawLte6SNmTgCsAVtYtaKzEcn8ATUoHMkEqE=
