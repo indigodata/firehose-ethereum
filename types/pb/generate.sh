@@ -30,6 +30,7 @@ function main() {
   generate "sf/ethereum/trxstream/v1/trxstream.proto"
   generate "sf/ethereum/type/v2/type.proto"
   generate "sf/ethereum/substreams/v1/rpc.proto"
+  generate "sf/ethereum/indigo/trxhash.proto"
 
   echo "generate.sh - `date` - `whoami`" > ./last_generate.txt
   echo "streamingfast/proto revision: `GIT_DIR=$PROTO/.git git rev-parse HEAD`" >> ./last_generate.txt

@@ -219,6 +219,9 @@ func nodeFactoryFunc(isReader bool, backupModuleFactories map[string]operator.Ba
 		trxPoolLogPlugin := nodemanager.NewTrxPoolLogPlugin(appLogger)
 		superviser.RegisterLogPlugin(trxPoolLogPlugin)
 
+		trxHashLogPlugin := nodemanager.NewTrxHashLogPlugin(appLogger)
+		superviser.RegisterLogPlugin(trxHashLogPlugin)
+
 		return nodeManagerApp.New(&nodeManagerApp.Config{
 			HTTPAddr: httpAddr,
 			GRPCAddr: gprcListenAddr,
@@ -231,6 +234,7 @@ func nodeFactoryFunc(isReader bool, backupModuleFactories map[string]operator.Ba
 				pbbstream.RegisterBlockStreamServer(server, blockStreamServer)
 
 				trxPoolLogPlugin.RegisterServices(server)
+				trxHashLogPlugin.RegisterServices(server)
 
 				return nil
 			},
