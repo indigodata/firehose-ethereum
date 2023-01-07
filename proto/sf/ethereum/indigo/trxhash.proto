@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package sf.ethereum.indigo;
+
+option go_package = "github.com/streamingfast/firehose-ethereum/types/pb/sf/ethereum/indigo;pbtrxhash";
+
+service TransactionHashStream {
+  rpc Hashes(HashRequest) returns (stream TransactionHash);
+}
+
+message HashRequest {
+}
+
+// A Transaction not yet in block
+message TransactionHash {
+  bytes tx_hash = 1;
+  uint64 peer_id = 2;
+  uint64 batch_size = 3;
+  uint64 received_at = 4;
+}
