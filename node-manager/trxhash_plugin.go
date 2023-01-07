@@ -51,7 +51,7 @@ func (p *TrxHashLogPlugin) Launch() {}
 func (p TrxHashLogPlugin) Stop()    {}
 
 func (p *TrxHashLogPlugin) Name() string {
-	return "TrxPoolLogPlugin"
+	return "TrxHashLogPlugin"
 }
 func (p *TrxHashLogPlugin) Close(_ error) {
 	p.server.Shutdown(nil)
@@ -61,7 +61,7 @@ func (p *TrxHashLogPlugin) RegisterServices(gs grpc.ServiceRegistrar) {
 	pbtrxhash.RegisterTransactionStreamServer(gs, p.server)
 }
 
-func (p *TrxPoolLogPlugin) LogLine(line string) {
+func (p *TrxHashLogPlugin) LogLine(line string) {
 	switch {
 	case strings.HasPrefix(line, "FIRE TRX_HASH_BROADCAST"):
 		line = line[5:]
